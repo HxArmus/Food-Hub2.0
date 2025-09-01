@@ -4,15 +4,17 @@ import { assets } from '../../assets/assets'
 
 
 const Navbar = () => {
+    const [menu,setMenu] = React.useState("Home");
   return (
     <div className='navbar'>
         <img src={assets.logo}  className='logo' alt="" />
         <ul className='navbar-menu'>
-          <li className='navbar-item'>Home</li>
-          <li className='navbar-item'>Menu</li>
-          <li className='navbar-item'>Mobile-app</li>
-          <li className='navbar-item'>Contact us</li>
+          <li onClick={() => setMenu("Home")} className={menu==="Home" ? "active" : ""}>Home</li>
+          <li onClick={() => setMenu("Menu")} className={menu==="Menu" ? "active" : ""}>Menu</li>
+          <li onClick={() => setMenu("Mobile-app")} className={menu==="Mobile-app" ? "active" : ""}>Mobile-app</li>
+          <li onClick={() => setMenu("Contact us")} className={menu==="Contact us" ? "active" : ""}>Contact us</li>
         </ul>
+        <div className='navbar-right'>
         <img src={assets.search_icon} className='search-icon' alt="" />
         <div className='navbar-search-icon'>
             <img src={assets.basket_icon} alt="" />
@@ -21,6 +23,7 @@ const Navbar = () => {
         </div>
         <button>sign in</button>
 
+    </div>
     </div>
   )
 }
