@@ -1,0 +1,5 @@
+- [x] Add media queries to Footer.css for mobile responsiveness (stack columns vertically, adjust padding)
+- [x] Add media queries to Navbar.css for mobile responsiveness (hamburger menu or vertical layout)
+- [x] Adjust Fooditem.css for mobile (reduce fixed heights if needed)
+- [x] Adjust index.css for global responsive width on small screens
+- [ ] Test responsiveness in browser

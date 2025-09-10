@@ -16,6 +16,19 @@ a{
   width: 80%;
   margin: auto;
 }
+
+@media (max-width: 768px) {
+  .app {
+    width: 95%;
+  }
+}
+
+@media (max-width: 480px) {
+  .app {
+    width: 100%;
+    padding: 0 10px;
+  }
+}
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
