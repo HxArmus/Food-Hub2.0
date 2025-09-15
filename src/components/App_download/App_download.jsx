@@ -5,7 +5,7 @@ import { assets } from '../../assets/assets'
 
 const App_download = () => {
   return (
-    <div className='App-download'>
+    <div className='App-download' id='App_download'>
         <p>
             Download the app now! <br />Food-hub app is available on <span>Play Store</span> and <span>App Store</span>
         </p>

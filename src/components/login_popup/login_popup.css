@@ -1,0 +1,147 @@
+/* Fullscreen background overlay */
+.Login_popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* dark transparent background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Container box */
+.Login_popup_container {
+  background: #fff;
+  width: 360px;
+  padding: 25px 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  position: relative;
+  font-family: "Segoe UI", Arial, sans-serif;
+  animation: popupFade 0.3s ease;
+}
+
+@keyframes popupFade {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Title & close button */
+.Login_popup_title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.Login_popup_title h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+}
+
+.Login_popup_title img {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.Login_popup_title img:hover {
+  transform: scale(1.1);
+}
+
+/* Inputs */
+.Login_popup_inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.Login_popup_inputs input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+  transition: border 0.3s;
+}
+
+.Login_popup_inputs input:focus {
+  border-color: #ff5722;
+}
+
+/* Button */
+.Login_popup_container button {
+  width: 100%;
+  padding: 12px;
+  background: #ff5722;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.Login_popup_container button:hover {
+  background: #e64a19;
+}
+
+/* Checkbox and terms (fixed alignment) */
+.Login_popup_condition {
+  display: flex;
+  align-items: center;   /* aligns checkbox with text */
+  gap: 8px;
+  margin: 15px 0;
+}
+
+.Login_popup_condition input[type="checkbox"] {
+  margin: 0;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  accent-color: #ff5722; /* custom orange checkbox */
+}
+
+.Login_popup_condition p {
+  font-size: 13px;
+  color: #555;
+  line-height: 1.4;
+}
+
+.Login_popup_condition span {
+  color: #ff5722;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* Switch login/signup link */
+.Login_popup_container p {
+  font-size: 14px;
+  text-align: center;
+  margin-top: 10px;
+  color: #444;
+}
+
+.Login_popup_container p span {
+  color: #ff5722;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.Login_popup_container p span:hover {
+  text-decoration: underline;
+}
